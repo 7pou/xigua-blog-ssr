@@ -1,3 +1,4 @@
+@import './var.scss';
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -29,7 +30,7 @@
     justify-content: center;
   }
   .desc-block {
-    margin: 6px 0;
+    margin: 26px 0;
   }
   
   .avatar-block{
@@ -39,5 +40,10 @@
       width: 100%;
       border-radius: 50%;
     }
+  }
+
+  .menu-item {
+    color: $app-color-primary;
+    cursor: pointer;
   }
 }
