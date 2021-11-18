@@ -2,6 +2,7 @@ import { fetchArticleList } from '../../services/article';
 import { parseTime } from '@/utils/date';
 import React, { useEffect, useState } from 'react'
 import Link from "next/link"
+import Head from "next/head";
 import styles from './article.module.scss'
 const renderArticleItem = (props) => {
 
@@ -36,8 +37,16 @@ const renderArticleItem = (props) => {
 
 const ArticleList = (props) => {
   return (
-    <div className={styles['article-list']}>
-      {(props.articleList || []).map(e => renderArticleItem(e))}
+    <div>
+      <Head>
+        <title>文章</title>
+        <meta http-equiv="description" content="西瓜博客" />
+        <meta  name="description" content="西瓜的生活,西瓜的技术,古代诗人" />
+        <meta  name="keywords" content="西瓜,前端,JavaScript,Vue.js,React.js" />
+      </Head>
+      <main className={styles['article-list']}>
+        {(props.articleList || []).map(e => renderArticleItem(e))}
+      </main>
     </div>
   )
 }
