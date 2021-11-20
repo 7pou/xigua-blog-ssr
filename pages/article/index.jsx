@@ -4,12 +4,15 @@ import React, { useEffect, useState } from 'react'
 import Link from "next/link"
 import Head from "next/head";
 import styles from './article.module.scss'
+import Spin from '../../components/Spin';
 const renderArticleItem = (props) => {
 
+  const [page, setPage] = useState(1)
   
 
 
   return (
+  
     <Link href={'/article/info?id=' + props.id } key={props.id}>
       <div className={styles['article-item']}>
         <div className={styles['title']}>{props.title}</div>
@@ -36,6 +39,7 @@ const renderArticleItem = (props) => {
 }
 
 const ArticleList = (props) => {
+  console.log(props)
   return (
     <div>
       <Head>
@@ -44,9 +48,11 @@ const ArticleList = (props) => {
         <meta  name="description" content="西瓜的生活,西瓜的技术,古代诗人" />
         <meta  name="keywords" content="西瓜,前端,JavaScript,Vue.js,React.js" />
       </Head>
-      <main className={styles['article-list']}>
-        {(props.articleList || []).map(e => renderArticleItem(e))}
-      </main>
+      <Spin spinning={!props.loaded}>
+        <main className={styles['article-list']}>
+          {(props.articleList || []).map(e => renderArticleItem(e))}
+        </main>
+      </Spin>
     </div>
   )
 }
@@ -54,7 +60,7 @@ const ArticleList = (props) => {
 export const getStaticProps = async () => {
   const res = await fetchArticleList()
  
-  return { props: {articleList: res.data.list, articleTotal: res.data.total}  }
+  return { props: {articleList: res.data.list, articleTotal: res.data.total, loaded: true}  }
 }
 
 
