@@ -1,0 +1,41 @@
+@import '../../styles/var.scss';
+.loading-container {
+  position: relative;
+}
+.loading-block {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.loading-block .loading-box {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  position: relative;
+  animation: rotateZ 2s linear infinite;
+  background-image: conic-gradient(#fff 0%, $app-color-primary 80%, white 80% 100% );
+}
+.loading-block .loading-box::after {
+  content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+@keyframes rotateZ {
+  0%{
+    transform: rotateZ(0deg)
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
