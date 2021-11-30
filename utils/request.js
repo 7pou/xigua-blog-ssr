@@ -4,11 +4,11 @@ import axios from "axios";
  * @Author: zhao - 🍉
  * @Date: 2021-03-30 21:00:53
  * @LastEditors: zhao - 🍉
- * @LastEditTime: 2021-11-17 10:02:05
+ * @LastEditTime: 2021-11-30 17:21:53
  * @Descripttion: 
  */
 const request = axios.create({
-  baseURL: 'http://7pou.com/api/',
+  baseURL: 'http://7pou.com/api/app',
   method: 'POST',
   timeout: 15000
 })
