@@ -39,7 +39,6 @@ const renderArticleItem = (props) => {
 }
 
 const ArticleList = (props) => {
-  console.log(props)
   return (
     <div>
       <Head>
