@@ -17,12 +17,13 @@ const renderArticleItem = (props) => {
       <div className={styles['article-item']}>
         <div className={styles['title']}>{props.title}</div>
         <div className={styles['content'] + ' app-ellipsis-multi'}>{props.content}</div>
-        <div className={styles['tags']}>
-          <span className={styles['tag-item']}>react</span>
-          <span className={styles['tag-item']}>vue</span>
-          <span className={styles['tag-item']}>Array实现</span>
-          <span className={styles['tag-item']}>webpack</span>
-        </div>
+        {props.tagNames && (
+          <div className={styles['tags']}>
+            {props.tagNames.map(e => (
+              <span className={styles['tag-item']}>{e.name}</span>
+            ))}
+          </div>
+        )}
         <div className={'app-flex ' + styles['statistic']}>
           <div className={'app-flex ' + styles['item']}>
             <span className={'iconfont icon-browse'}></span>

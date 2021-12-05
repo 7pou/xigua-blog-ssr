@@ -9,11 +9,12 @@ import gfm from "@bytemd/plugin-gfm";
 import Spin from '../../components/Spin';
 const ArticleInfo = (props) => {
   const plugins = [highlight(), gfm()]
+  const keyword = props.articleData.tagNames ? props.articleData.tagNames.map(e=> e.name).join(',') : ''
   return (
     <div>
       <Head>
         <title>{props.articleData.title}</title>
-        <meta name="keywords" content="" />
+        <meta name="keywords" content={keyword} />
         <meta name="description" content={props.articleData.title} />
       </Head>
       <Spin spinning={!props.loaded}>
