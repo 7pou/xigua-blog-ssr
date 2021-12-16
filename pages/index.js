@@ -2,7 +2,7 @@
  * @Author: zhao - 🍉
  * @Date: 1985-10-26 16:15:00
  * @LastEditors: zhao - 🍉
- * @LastEditTime: 2021-11-18 16:22:47
+ * @LastEditTime: 2021-12-16 16:37:27
  * @Descripttion: 
  */
 import styles from "../styles/Home.module.scss";
@@ -17,6 +17,7 @@ const Index = (props) => {
     <div>
       <Head>
         <title>西瓜</title>
+        <meta name="baidu-site-verification" content="code-dJgvz1vM0Y" />
         <meta http-equiv="description" content="西瓜博客" />
         <meta  name="description" content="西瓜的生活,西瓜的技术,古代诗人" />
         <meta  name="keywords" content="西瓜,前端,JavaScript,Vue.js,React.js" />

@@ -27,6 +27,7 @@ class HeadConfig extends React.Component{
     return (
       <Head>
         {this.props.children}
+        <meta name="baidu-site-verification" content="code-dJgvz1vM0Y" />
         <meta name="keywords" content={this.getKeywords()} />
         <meta name="description" content={this.getDescription()} />
       </Head>

@@ -44,6 +44,7 @@ const ArticleList = (props) => {
     <div>
       <Head>
         <title>文章</title>
+        <meta name="baidu-site-verification" content="code-dJgvz1vM0Y" />
         <meta http-equiv="description" content="西瓜博客" />
         <meta  name="description" content="西瓜的生活,西瓜的技术,古代诗人" />
         <meta  name="keywords" content="西瓜,前端,JavaScript,Vue.js,React.js" />
@@ -57,7 +58,7 @@ const ArticleList = (props) => {
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetchArticleList()
  
   return { props: {articleList: res.data.list, articleTotal: res.data.total, loaded: true}  }
