@@ -10,7 +10,7 @@ const Layout = (props) => {
         <aside className={styles['slide-block']}>
           <Tags />
           <Tags />
-          <Tags />
+          <Tags value={props.tags}/>
         </aside>
       </div>
      
