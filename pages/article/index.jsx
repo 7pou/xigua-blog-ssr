@@ -18,9 +18,9 @@ const renderArticleItem = (props) => {
         <div className={styles['title']}>{props.title}</div>
         <div className={styles['content'] + ' app-ellipsis-multi'}>{props.content}</div>
         {props.tagNames && (
-          <div className={styles['tags']}>
+          <div className="app-tag">
             {props.tagNames.map(e => (
-              <span className={styles['tag-item']}>{e.name}</span>
+              <span className="app-tag-item">{e.name}</span>
             ))}
           </div>
         )}
