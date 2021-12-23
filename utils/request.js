@@ -1,16 +1,17 @@
 import axios from "axios";
+import { HOST, REQUEST_BASE_URL, REQUEST_TIMEOUT } from "../common/config";
 
 /*
  * @Author: zhao - 🍉
  * @Date: 2021-03-30 21:00:53
  * @LastEditors: zhao - 🍉
- * @LastEditTime: 2021-11-30 17:21:53
+ * @LastEditTime: 2021-12-23 15:09:33
  * @Descripttion: 
  */
 const request = axios.create({
-  baseURL: 'http://7pou.com/api/app',
+  baseURL: HOST + REQUEST_BASE_URL,
   method: 'POST',
-  timeout: 15000
+  timeout: REQUEST_TIMEOUT
 })
 request.interceptors.request.use(req => {
   if (req.method === 'get') {
