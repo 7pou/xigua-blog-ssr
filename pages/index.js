@@ -2,7 +2,7 @@
  * @Author: zhao - 🍉
  * @Date: 1985-10-26 16:15:00
  * @LastEditors: zhao - 🍉
- * @LastEditTime: 2021-12-16 16:37:27
+ * @LastEditTime: 2021-12-30 15:23:15
  * @Descripttion: 
  */
 import styles from "../styles/Home.module.scss";
@@ -10,6 +10,7 @@ import Watermelon from "../components/Watermelon";
 
 import Link from 'next/link';
 import Head from "next/head";
+import Footer from "../containers/Footer";
 
 const Index = (props) => {
 
@@ -39,7 +40,7 @@ const Index = (props) => {
           </div>
         </div>
       </main>
-
+      <Footer />
     </div>
   )
 }
