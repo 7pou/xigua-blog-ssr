@@ -2,7 +2,7 @@
  * @Author: zhao - 🍉
  * @Date: 1985-10-26 16:15:00
  * @LastEditors: zhao - 🍉
- * @LastEditTime: 2022-01-04 09:36:35
+ * @LastEditTime: 2022-01-05 13:49:57
  * @Descripttion: 
  */
 import styles from "../styles/Home.module.scss";
@@ -31,6 +31,17 @@ const Index = (props) => {
           </div>
           <div className={styles['desc-block']}>
             你好
+          </div>
+          <div className={styles['connect-block']}>
+            <div className={styles['connect-item']}>
+              <i className="iconfont icon-github"></i>
+            </div>
+            <div className={styles['connect-item']}>
+              <i className="iconfont icon-codepen"></i>
+            </div>
+            <div className={styles['connect-item']}>
+              <i className="iconfont icon-telegram"></i>
+            </div>
           </div>
           <div className={styles['menu-block']}>
             <div className={styles['menu-list']}>

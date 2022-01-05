@@ -30,7 +30,7 @@
     justify-content: center;
   }
   .desc-block {
-    margin: 26px 0;
+    margin-top: 26px;
   }
   
   .avatar-block{
@@ -45,5 +45,20 @@
   .menu-item {
     color: $app-color-primary;
     cursor: pointer;
+    margin-top: 26px;
+  }
+
+  .connect-block {
+    display: flex;
+    margin-top: 26px;
+    
+    .connect-item {
+      cursor: pointer;
+      margin: 0 26px;
+      i {
+        font-size: 30px;
+        color: #999;
+      }
+    }
   }
 }
