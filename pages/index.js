@@ -2,7 +2,7 @@
  * @Author: zhao - 🍉
  * @Date: 1985-10-26 16:15:00
  * @LastEditors: zhao - 🍉
- * @LastEditTime: 2022-01-13 18:11:06
+ * @LastEditTime: 2022-01-13 18:16:51
  * @Descripttion: 
  */
 import styles from "../styles/Home.module.scss";
@@ -27,7 +27,7 @@ const Index = (props) => {
       <main className={styles['home-page']}>
         <div className={styles['container']+ ' app-flex'}>
           <div className={styles['avatar-block']}>
-            {/* <Watermelon/> */}
+            <Watermelon/>
           </div>
           <div className={styles['desc-block']}>
             你好
