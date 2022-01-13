@@ -2,7 +2,7 @@
  * @Author: zhao - 🍉
  * @Date: 1985-10-26 16:15:00
  * @LastEditors: zhao - 🍉
- * @LastEditTime: 2022-01-06 20:44:01
+ * @LastEditTime: 2022-01-13 18:11:06
  * @Descripttion: 
  */
 import styles from "../styles/Home.module.scss";
@@ -27,15 +27,15 @@ const Index = (props) => {
       <main className={styles['home-page']}>
         <div className={styles['container']+ ' app-flex'}>
           <div className={styles['avatar-block']}>
-            <Watermelon/>
+            {/* <Watermelon/> */}
           </div>
           <div className={styles['desc-block']}>
             你好
           </div>
           <div className={styles['menu-block']}>
             <div className={styles['menu-list']}>
-              <Link href="/article">
-                <div className={styles['menu-item']}>文章</div>
+              <Link href="/article" >
+                <a className={styles['menu-item']}>文章</a>
               </Link>
             </div>
           </div>

@@ -14,7 +14,7 @@ const renderArticleItem = (props) => {
   return (
   
     <Link href={'/article/info?id=' + props.id } key={props.id}>
-      <div className={styles['article-item']}>
+      <a className={styles['article-item']}>
         <div className={styles['title']}>{props.title}</div>
         <div className={styles['content'] + ' app-ellipsis-multi'}>{props.content}</div>
         {props.tagNames && (
@@ -34,7 +34,7 @@ const renderArticleItem = (props) => {
             <span>{parseTime(props.create_time)}</span>
           </div>
         </div>
-      </div>
+      </a>
     </Link>
   )
 }
