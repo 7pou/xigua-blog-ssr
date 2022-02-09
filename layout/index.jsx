@@ -1,7 +1,7 @@
 /*
  * @Author: zhao - 🍉
  * @Date: 2021-04-15 16:56:53
- * @LastEditTime: 2022-02-09 13:41:05
+ * @LastEditTime: 2022-02-09 14:40:22
  * @LastEditors: zhao - 🍉
  * @Description: 
  * @FilePath: /xigua-blog-ssr/layout/index.jsx
@@ -39,6 +39,7 @@ const Layout = (props) => {
       <div>
         <Head>
           <title>西瓜</title>
+          <meta charset="utf-8" />
           <meta name="baidu-site-verification" content="code-dJgvz1vM0Y" />
           <meta name="google-site-verification" content="-DKnUf8bFR1MaIoAgT8BV58Dk31nVAieg2aFmi0Vd-c" />
           <meta http-equiv="description" content="西瓜博客" />
