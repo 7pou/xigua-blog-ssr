@@ -14,7 +14,6 @@ const ArticleInfo = (props) => {
     <div>
       <Head>
         <title>{props.articleData.title}</title>
-        <meta name="baidu-site-verification" content="code-dJgvz1vM0Y" />
         <meta name="keywords" content={keyword} />
         <meta name="description" content={props.articleData.title} />
       </Head>

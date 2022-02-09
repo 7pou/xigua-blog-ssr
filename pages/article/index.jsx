@@ -44,10 +44,6 @@ const ArticleList = (props) => {
     <div>
       <Head>
         <title>文章</title>
-        <meta name="baidu-site-verification" content="code-dJgvz1vM0Y" />
-        <meta http-equiv="description" content="西瓜博客" />
-        <meta  name="description" content="西瓜的生活,西瓜的技术,古代诗人" />
-        <meta  name="keywords" content="西瓜,前端,JavaScript,Vue.js,React.js" />
       </Head>
       <Spin spinning={!props.loaded}>
         <main className={styles['article-list']}>
