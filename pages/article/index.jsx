@@ -4,12 +4,11 @@ import React, { useEffect, useState } from 'react'
 import Link from "next/link"
 import Head from "next/head";
 import styles from './article.module.scss'
-import Spin from '../../components/Spin';
-const renderArticleItem = (props) => {
+import ScrollView from '../../components/ScrollView';
 
-  const [page, setPage] = useState(1)
-  
+const PAGE_SIZE = 10
 
+const renderArticleItem = (props) => { 
 
   return (
   
@@ -40,24 +39,45 @@ const renderArticleItem = (props) => {
 }
 
 const ArticleList = (props) => {
+  const [page, setPage] = useState(1)
+  const [loading, setLoading] = useState(false);
+  const [concat, setConcat] = useState([]);
+  const mergeList = [...(props.articleList || []),...concat ]
+  const handleScrollBottom = () => {
+    if (loading) return
+    if (props.articleTotal <= mergeList.length) return
+    setPage(page+1)
+  }
+  useEffect(() => {
+    page !== 1 && postList(page)
+  }, [page]);
+
+  const postList = async (page) => {
+    setLoading(true)
+    const res = await fetchArticleList({ page,  pageSize: PAGE_SIZE })
+    setConcat([...concat, ...res.data.list])
+    setLoading(false)
+  }
+  
   return (
     <div>
       <Head>
         <title>文章</title>
       </Head>
-      <Spin spinning={!props.loaded}>
-        <main className={styles['article-list']}>
-          {(props.articleList || []).map(e => renderArticleItem(e))}
-        </main>
-      </Spin>
+      
+      <main className={styles['article-list']}>
+        <ScrollView height="calc(100vh - 100px)" onScrollBottom={handleScrollBottom}>
+          {mergeList.map(e => renderArticleItem(e))}
+        </ScrollView>
+      </main>
     </div>
   )
 }
 
 export const getServerSideProps = async () => {
-  const res = await fetchArticleList()
+  const res = await fetchArticleList({ pageSize: PAGE_SIZE })
  
-  return { props: {articleList: res.data.list, articleTotal: res.data.total, loaded: true}  }
+  return { props: {articleList: res.data.list, articleTotal: res.data.total}  }
 }
 
 
