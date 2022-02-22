@@ -1,7 +1,7 @@
 /*
  * @Author: zhao - 🍉
  * @Date: 2021-04-15 16:56:21
- * @LastEditTime: 2021-12-23 15:04:48
+ * @LastEditTime: 2022-02-09 15:51:42
  * @LastEditors: zhao - 🍉
  * @Description: Tags
  * @FilePath: /xigua-blog-ssr/containers/Tags/index.jsx
@@ -25,8 +25,8 @@ const Tags = (props) => {
     </Card>
   )
 }
-Tags.getInitialProps = async function(props) {
-  const res = await fetchArticleTags()
-  return { props: { loaded: true, tagsData: res.data.list || [] } }
-}
+// Tags.getInitialProps = async function(props) {
+//   const res = await fetchArticleTags()
+//   return { props: { loaded: true, tagsData: res.data.list || [] } }
+// }
 export default Tags
