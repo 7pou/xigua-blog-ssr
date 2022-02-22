@@ -2,12 +2,12 @@
  * @Author: zhao - 🍉
  * @Date: 2021-04-15 16:55:49
  * @LastEditors: zhao - 🍉
- * @LastEditTime: 2022-02-09 12:42:14
+ * @LastEditTime: 2022-02-22 20:35:00
  * @Descripttion: 
  */
 
 
-// export const HOST = 'http://7pou.com/api'
+export const PROD_HOST = 'https://7pou.com/api'
 export const HOST = 'http://127.0.0.1:7001'
 export const REQUEST_BASE_URL = '/app'
 export const REQUEST_TIMEOUT = 15000
