@@ -1,3 +1,11 @@
+/*
+ * @Author: zhao - 🍉
+ * @Date: 2021-12-08 21:59:48
+ * @LastEditTime: 2022-02-22 20:38:09
+ * @LastEditors: zhao - 🍉
+ * @Description: 
+ * @FilePath: /xigua-blog-ssr/pages/article/index.jsx
+ */
 import { fetchArticleList } from '../../services/article';
 import { parseTime } from '@/utils/date';
 import React, { useEffect, useState } from 'react'
@@ -66,7 +74,7 @@ const ArticleList = (props) => {
       </Head>
       
       <main className={styles['article-list']}>
-        <ScrollView height="calc(100vh - 100px)" onScrollBottom={handleScrollBottom}>
+        <ScrollView height="100vh" onScrollBottom={handleScrollBottom}>
           {mergeList.map(e => renderArticleItem(e))}
         </ScrollView>
       </main>
