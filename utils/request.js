@@ -1,15 +1,15 @@
 import axios from "axios";
-import { HOST, REQUEST_BASE_URL, REQUEST_TIMEOUT } from "../common/config";
+import { HOST, PROD_HOST, REQUEST_BASE_URL, REQUEST_TIMEOUT } from "../common/config";
 
 /*
  * @Author: zhao - 🍉
  * @Date: 2021-03-30 21:00:53
  * @LastEditors: zhao - 🍉
- * @LastEditTime: 2021-12-23 15:09:33
+ * @LastEditTime: 2022-02-22 20:36:19
  * @Descripttion: 
  */
 const request = axios.create({
-  baseURL: HOST + REQUEST_BASE_URL,
+  baseURL: PROD_HOST + REQUEST_BASE_URL,
   method: 'POST',
   timeout: REQUEST_TIMEOUT
 })
